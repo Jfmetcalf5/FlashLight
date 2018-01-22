@@ -22,19 +22,31 @@
                                 <rect key="frame" x="168" y="560" width="39" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="On"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="wKH-17-jyI"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="U3X-CL-MVJ" appends="YES" id="aZF-1i-yZn"/>
+                            <outletCollection property="gestureRecognizers" destination="OFg-Hb-3TS" appends="YES" id="81q-Yg-Jm4"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="lightButton" destination="Pgs-aG-sbk" id="XVS-V5-zdD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="U3X-CL-MVJ">
+                    <connections>
+                        <action selector="swipedLeft:" destination="BYZ-38-t0r" id="UQY-8T-sdF"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="OFg-Hb-3TS">
+                    <connections>
+                        <action selector="swipedRight:" destination="BYZ-38-t0r" id="ilf-nk-ETj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
