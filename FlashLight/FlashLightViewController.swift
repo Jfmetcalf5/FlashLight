@@ -23,23 +23,15 @@ class FlashLightViewController: UIViewController {
         if isOn {
             isOn = false
             view.backgroundColor = UIColor.black
-            lightButton.setTitleColor(.red, for: .normal)
-            lightButton.titleLabel?.text = "Off"
-            lightButton.backgroundColor = .gray
+            lightButton.setTitleColor(.white, for: .normal)
+            lightButton.setTitle("On", for: .normal)
         } else {
             isOn = true
             view.backgroundColor = UIColor.white
             lightButton.setTitleColor(.black, for: .normal)
-            lightButton.titleLabel?.text = "On"
-            lightButton.backgroundColor = .gray
+            lightButton.setTitle("Off", for: .normal)
         }
     }
-    
-    
-    
-    // This comment should be on gitHUB
-    
-    
     
 }
 
