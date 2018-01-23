@@ -18,10 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aG-sbk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aG-sbk">
                                 <rect key="frame" x="152" y="560" width="72" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="&lt;Swipe&gt;"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vOO-cc-stc"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-cA-TTw">
                                 <rect key="frame" x="163" y="597" width="51" height="31"/>
@@ -49,12 +52,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="U3X-CL-MVJ" userLabel="Swipe Left Gesture Recognizer">
+                <swipeGestureRecognizer enabled="NO" direction="right" id="U3X-CL-MVJ" userLabel="Swipe Left Gesture Recognizer">
                     <connections>
                         <action selector="swipedLeft:" destination="BYZ-38-t0r" id="UQY-8T-sdF"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="OFg-Hb-3TS" userLabel="Swipe Right Gesture Recognizer">
+                <swipeGestureRecognizer enabled="NO" direction="left" id="OFg-Hb-3TS" userLabel="Swipe Right Gesture Recognizer">
                     <connections>
                         <action selector="swipedRight:" destination="BYZ-38-t0r" id="ilf-nk-ETj"/>
                     </connections>

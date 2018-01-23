@@ -16,7 +16,10 @@ class FlashLightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-}
+        
+    }
+    
+    // MARK: - Toggle Switch
     
     @IBAction func lightSwitch(_ sender: UISwitch) {
         if isOn {
@@ -25,50 +28,45 @@ class FlashLightViewController: UIViewController {
             lightButton.setTitleColor(.white, for: .normal)
             lightButton.setTitle("Off", for: .normal)
             UIApplication.shared.statusBarStyle = .lightContent
-            
         } else {
             isOn = true
             view.backgroundColor = UIColor.white
             lightButton.setTitleColor(.black, for: .normal)
             lightButton.setTitle("On", for: .normal)
         }
-
     }
     
+    //  MARK: - Swipe Gesture Recognizer
     
+    @IBAction func swipedRight(_ sender: UISwipeGestureRecognizer) {
+        UIApplication.shared.statusBarStyle = .lightContent
+        view.backgroundColor = UIColor.black
+        lightButton.setTitleColor(.white, for: .normal)
+    }
+    @IBAction func swipedLeft(_ sender: UISwipeGestureRecognizer) {
+        UIApplication.shared.statusBarStyle = .default
+        view.backgroundColor = UIColor.white
+        lightButton.setTitleColor(.black, for: .normal)
+    }
     
-    
-//    @IBAction func swipedRight(_ sender: UISwipeGestureRecognizer) {
-//        UIApplication.shared.statusBarStyle = .lightContent
-//        view.backgroundColor = UIColor.black
-//        lightButton.setTitleColor(.white, for: .normal)
-//    }
-//    @IBAction func swipedLeft(_ sender: UISwipeGestureRecognizer) {
-//        UIApplication.shared.statusBarStyle = .default
-//        view.backgroundColor = UIColor.white
-//        lightButton.setTitleColor(.black, for: .normal)
-//    }
-    
+// MARK: - Button Tapped
+
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        if isOn {
+            isOn = false
+            view.backgroundColor = UIColor.black
+            lightButton.setTitleColor(.white, for: .normal)
+            lightButton.setTitle("On", for: .normal)
+            UIApplication.shared.statusBarStyle = .lightContent
+
+        } else {
+            isOn = true
+            view.backgroundColor = UIColor.white
+            lightButton.setTitleColor(.black, for: .normal)
+            lightButton.setTitle("Off", for: .normal)
+        }
+    }
+
 }
-    
-//    @IBAction func buttonTapped(_ sender: UIButton) {
-//        if isOn {
-//            isOn = false
-//            view.backgroundColor = UIColor.black
-//            lightButton.setTitleColor(.white, for: .normal)
-//            lightButton.setTitle("On", for: .normal)
-//            UIApplication.shared.statusBarStyle = .lightContent
-//
-//        } else {
-//            isOn = true
-//            view.backgroundColor = UIColor.white
-//            lightButton.setTitleColor(.black, for: .normal)
-//            lightButton.setTitle("Off", for: .normal)
-//        }
-//    }
-//
-//}
-
-
 
 
