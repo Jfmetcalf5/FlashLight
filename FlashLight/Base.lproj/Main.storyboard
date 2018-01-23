@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aG-sbk">
-                                <rect key="frame" x="168" y="560" width="39" height="48"/>
+                                <rect key="frame" x="152" y="560" width="72" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="On"/>
+                                <state key="normal" title="&lt;Swipe&gt;"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,12 +37,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="U3X-CL-MVJ">
+                <swipeGestureRecognizer direction="right" id="U3X-CL-MVJ" userLabel="Swipe Left Gesture Recognizer">
                     <connections>
                         <action selector="swipedLeft:" destination="BYZ-38-t0r" id="UQY-8T-sdF"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="OFg-Hb-3TS">
+                <swipeGestureRecognizer direction="left" id="OFg-Hb-3TS" userLabel="Swipe Right Gesture Recognizer">
                     <connections>
                         <action selector="swipedRight:" destination="BYZ-38-t0r" id="ilf-nk-ETj"/>
                     </connections>

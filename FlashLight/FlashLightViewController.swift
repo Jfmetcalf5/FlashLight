@@ -19,16 +19,14 @@ class FlashLightViewController: UIViewController {
         
     }
     @IBAction func swipedRight(_ sender: UISwipeGestureRecognizer) {
+        UIApplication.shared.statusBarStyle = .lightContent
         view.backgroundColor = UIColor.black
         lightButton.setTitleColor(.white, for: .normal)
-        lightButton.setTitle("On", for: .normal)
-        UIApplication.shared.statusBarStyle = .lightContent
     }
     @IBAction func swipedLeft(_ sender: UISwipeGestureRecognizer) {
+        UIApplication.shared.statusBarStyle = .default
         view.backgroundColor = UIColor.white
         lightButton.setTitleColor(.black, for: .normal)
-        lightButton.setTitle("Off", for: .normal)
-        UIApplication.shared.statusBarStyle = .lightContent
     }
     
 }
