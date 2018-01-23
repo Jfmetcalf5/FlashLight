@@ -23,9 +23,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="&lt;Swipe&gt;"/>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-cA-TTw">
+                                <rect key="frame" x="163" y="597" width="51" height="31"/>
+                                <connections>
+                                    <action selector="lightSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="KKK-Na-chr"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fgB-cA-TTw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OSS-3J-YBH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fgB-cA-TTw" secondAttribute="bottom" constant="39" id="Xem-cF-7Y2"/>
+                            <constraint firstItem="fgB-cA-TTw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="sxi-qx-5PI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fgB-cA-TTw" secondAttribute="trailing" constant="163" id="tS5-Pv-szs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="U3X-CL-MVJ" appends="YES" id="aZF-1i-yZn"/>
